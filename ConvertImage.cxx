@@ -31,6 +31,7 @@ int main( int argc, char** argv )
   TWriter::Pointer writer = TWriter::New( );
   writer->SetFileName( argv[ 2 ] );
   writer->SetInput( reader->GetOutput( ) );
+  writer->UseCompressionOn( );
 
   try
   {

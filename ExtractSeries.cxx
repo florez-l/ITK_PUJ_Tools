@@ -53,6 +53,7 @@ int main( int argc, char** argv )
     TWriter::Pointer writer = TWriter::New( );
     writer->SetFileName( out_fname.str( ) );
     writer->SetInput( reader->GetOutput( ) );
+    writer->UseCompressionOn( );
     std::cout
       << "Saving \"" << writer->GetFileName( )
       << "\" (" << i++ << "/" << ids.size( ) << ")... ";
